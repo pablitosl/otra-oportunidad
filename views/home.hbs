@@ -1,21 +1,33 @@
 <header>
-   <img src="media/logo_1.png" alt="logo" />
-   <nav>
-      <ul>
-         <li><a href="/">Home</a></li>
-         <li><a href="/all">Empleos</a></li>
-         <li><a href="#">Contacto</a></li>
-         <li>Sos empresa? Registrate y publica</li>
-      </ul>
-      <ul>
-
-         <li><a class="btn_login" href="/auth/signin">Login</a></li>
-         <li><a class="btn_login" href="/auth/signup">Registrarse</a></li>
-      </ul>
+   <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid">
+         <a class="navbar-brand" href="/"><img src="media/logo_1.png" alt="logo" /></a>
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+               <li class="nav-item">
+                  <a class="active nav_link" aria-current="page" href="/">Inicio</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav_link" href="/all">Empleos</a>
+               </li>
+               <li class="nav-item">
+                  <a class=" nav_link" href="#">Contacto</a>
+               </li>
+            </ul>
+            <ul class="ul_login">
+               <span class="login_span">¿Sos empresa? Registrate y publica</span>
+               <li><a class="btn_login" href="/auth/signin">Login</a></li>
+               <li><a class="btn_login" href="/auth/signup">Registrarse</a></li>
+            </ul>
+         </div>
+      </div>
    </nav>
 </header>
 <main>
-   <section class="seccion_uno m-5">
+   <section class="seccion_uno">
       <div class="div_presentacion">
          <h1>Otra Oportunidad</h1>
          <p>Creamos esta pagina destinada a personas mayores de 45 años para que
