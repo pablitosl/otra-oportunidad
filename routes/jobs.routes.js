@@ -1,7 +1,7 @@
 const express = require('express')
 const routerJobs = express.Router()
 
-const { getAll, formCreate, formEdit, createJob } = require('../controllers/jobs.controller')
+const { getAll, formCreate, formEdit, createJob, deleteJob, editJob, getOne } = require('../controllers/jobs.controller')
 const isAuthenticated = require('../middlewares/isAuthenticated')
 
 //Get All - Publico
@@ -18,22 +18,17 @@ routerJobs.get('/create', isAuthenticated, formCreate)
 // Formulario de edicion de empleos
 routerJobs.get('/edit/:id', isAuthenticated, formEdit)
 
-routerJobs.get('/:id', isAuthenticated, (req, res) => {
-    res.send('Detalle de un empleo')
-})
+// Detalles de empleo
+routerJobs.get('/:id', isAuthenticated, getOne)
 
 
 routerJobs.post('/', isAuthenticated, createJob)
 
 
-routerJobs.put('/:id', isAuthenticated, (req, res) => {
-    res.send('Editar un empleo')
-})
+routerJobs.put('/:id', isAuthenticated, editJob)
 
 
-routerJobs.delete('/:id', isAuthenticated, (req, res) => {
-    res.send('Borrar un empleo')
-})
+routerJobs.delete('/:id', isAuthenticated, deleteJob)
 
 
 module.exports = routerJobs

@@ -2,14 +2,15 @@
 
 <h1>Listado de Empleos (Publico)</h1>
 
-<div class="card text-center mt-5">
-  <div class="card-header">empresa</div>
-  <div class="card-body">
-    <h5 class="card-title">titulo</h5>
-    <p class="card-text">descripcion</p>
-    <a href="/jobs/1" class="btn btn-primary">Detalles</a>
-  </div>
-  <div class="card-footer text-muted">
-    2 days ago
-  </div>
-</div>
+{{#each jobs}}
+   <div class="card text-center mt-3">
+      <div class="card-header">{{this.enterprise}}</div>
+      <div class="card-body">
+         <h5 class="card-title">{{this.title}}</h5>
+         <p class="card-text">{{this.description}}</p>
+      </div>
+      <div class="card-footer text-muted">
+         {{this.createdAt}}
+      </div>
+   </div>
+{{/each}}

@@ -26,7 +26,9 @@ const signUp = async (req, res) => {
         const userFound = await Auth.findOne({ email })
 
         if (userFound) {
-            return res.send('Ya existe el usuario en nustros registros')
+            req.flash('todo_error', 'El usuario ya existe en nuestros registros')
+            //return res.send('Ya existe el usuario en nuestros registros')
+            return res.redirect('/auth/signin')
         }
 
         const newUser = new Auth({ name, email, password })
