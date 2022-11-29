@@ -7,20 +7,13 @@
     box-sizing: border-box;
 }
 
-/* HEADER 
-header{
-    display: flex;
-    background-color: rgb(25, 100, 180);
-    justify-content: space-between;
-}
-header img{
-    width: 222px;
-    height: 120px;
-    color: black;
-    
-}*/
+/* HEADER */
+
 nav{
-    background-color: rgb(25, 100, 180);
+    background-color: #006494;
+}
+.navbar{
+    padding: 0;
 }
 .nav_link{
     padding: 0 1rem;
@@ -43,8 +36,13 @@ nav{
     flex-wrap: wrap;
     justify-content: center;
 }
+.ul_login div{
+    display:flex;
+    margin-top: 5px;
+}
 .login_span{
     font-size: 18px;
+    font-weight: 500;
 }
 .btn_login{
     background: #18A0FB;
@@ -64,6 +62,7 @@ nav{
 .seccion_uno{
     display: flex;
     justify-content: space-between;
+    background-color: #e8f1f2;
 }
 .div_presentacion{
     width: 50%;
@@ -102,9 +101,7 @@ nav{
     margin: 10px 0;
     cursor: pointer;
 }
-.div_presentacion a:hover{
-    background: #0E6EB8;
-}
+
 .div_video{
     width: 50%;
     padding: 1rem;
@@ -158,6 +155,7 @@ nav{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #e8f1f2;
 }
 .seccion_tres h3{
     font-family: 'Raleway', sans-serif;
@@ -207,10 +205,10 @@ footer{
 }
 .footer_contacto{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    padding: 2rem 4rem;
+    padding: 2rem 1rem;
 }
 .footer_contacto h4{
     font-family: 'Raleway', sans-serif;
@@ -221,6 +219,7 @@ footer{
 }
 .card{
     box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.75);
+    margin: 6px 12px;
 }
 .card-body{
     text-align: center;
@@ -284,6 +283,9 @@ footer span{
 }
 /*Noteboook*/
 @media screen and (max-width:990px) {
+    .div_video{
+        width: 80%;
+    }
     /*Para que quede bien el menu hamburguesa*/
     .navbar-nav{
         text-align: center;
@@ -297,9 +299,66 @@ footer span{
 }
 /*Tablet*/
 @media screen and (max-width:770px) {
-    
+    .div_presentacion{
+        padding: 1rem;
+    }
+    .div_presentacion h1{
+        width: 100%;
+        font-size: 6rem;
+    }
+    .div_video{
+        width: 100%;
+    }
+    .div_img{
+        width: 70%;
+        padding: 1rem;
+    }
 }
 /*Celular*/
 @media screen and (max-width:570px) {
-    
+    .div_presentacion{
+        padding: .6rem;
+    }
+    .div_presentacion h1{
+        font-size: 4.5rem;
+    }
+    .div_presentacion p{
+        font-size: 1.6rem;
+    }
+    .div_presentacion a{
+        padding: 1rem 4rem;
+        font-weight: 700;
+        font-size: 1.7rem;
+        margin: 10px 0;
+    }
+    .div_beneficios h2{
+        font-size: 4rem;
+        margin-bottom: 1.6rem;
+    }
+    .div_beneficios p{
+        font-size: 1.5rem;
+    }
+    .seccion_tres h3{
+        font-size: 4rem;
+        margin-bottom: 2rem;
+    }
+    .seccion_tres p{
+        font-size: 1.6rem;
+        width: 90%;
+        margin-bottom: 2rem;
+    }
+}
+@media screen and (max-width:400px) {
+    .div_presentacion{
+        padding: 0;
+    }
+    .div_presentacion h1{
+        font-size: 3.7rem;
+    }
+    .div_presentacion a{
+        padding: 1rem 3rem;
+        font-weight: 700;
+        font-size: 1.7rem;
+        margin: 5px 0;
+    }
 }
