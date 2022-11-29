@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 /* HEADER */
@@ -119,12 +120,13 @@ nav{
 }
 .div_beneficios{
     width: 50%;
-    padding: 5rem;
+    padding: 4rem;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-bottom: 0;
 }
 .div_beneficios h2{
     font-family: 'Raleway', sans-serif;
@@ -142,7 +144,9 @@ nav{
 }
 .div_img{
     width: 50%;
-    padding: 5rem;
+    padding: 4rem;
+    padding-bottom: 0;
+    height: fit-content;
 }
 .div_img img{
     width: 100%;
@@ -316,6 +320,11 @@ footer span{
 }
 /*Celular*/
 @media screen and (max-width:570px) {
+    .btn_login{
+        padding: 0.3rem 1rem;
+        font-size: 1.5rem;
+        margin: 2px 7px;
+    }
     .div_presentacion{
         padding: .6rem;
     }
