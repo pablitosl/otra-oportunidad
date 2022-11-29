@@ -2,7 +2,7 @@ const passport = require('passport')
 
 const Auth = require('../models/auth.model')
 
-const getFormSingUp = (req, res) => res.render('auth/signup', {layout: 'landing'})
+const getFormSingUp = (req, res) => res.render('auth/signup', {layout: 'main'})
 
 const signUp = async (req, res) => {
 
@@ -42,7 +42,7 @@ const signUp = async (req, res) => {
     }
 
 }
-const getFormSingIn = (req, res) => res.render('auth/signin', {layout: 'landing'})
+const getFormSingIn = (req, res) => res.render('auth/signin', {layout: 'main'})
 
 const signIn = passport.authenticate('local', {
     successRedirect: '/jobs',
