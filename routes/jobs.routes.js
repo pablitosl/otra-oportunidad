@@ -4,11 +4,6 @@ const routerJobs = express.Router()
 const { getAll, formCreate, formEdit, createJob, deleteJob, editJob, getOne } = require('../controllers/jobs.controller')
 const isAuthenticated = require('../middlewares/isAuthenticated')
 
-//Get All - Publico
-/* routerJobs.get('/all', (req, res) => {
-    res.render('index', {layout: 'main'})
-}) */
-
 //Get All - Privado
 routerJobs.get('/', isAuthenticated, getAll)
 

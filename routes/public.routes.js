@@ -18,7 +18,20 @@ routerPublic.get('/all', async (req, res) => {
     } catch (error) {
         console.log(error)
     }
-    res.render('index', {layout: 'main'})
 })
+
+routerPublic.get('/all/:id', async (req, res) => {
+    try {
+        const { id } = req.params
+        //console.log(id)
+
+        const job = await jobModel.findById(id).lean() // .lean() => Dejarme lo que devuelve como un objeto vanilla javascript
+        // console.log(pelicula)
+
+        res.render('all/showPublic', { job, title: `Video Club - Viendo: ${job.title}`})
+    } catch (error) {
+        console.log('Error en getOne', error)
+    }
+}) 
 
 module.exports = routerPublic
