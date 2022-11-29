@@ -45,7 +45,7 @@ app.use((req, res, next) =>{
 
 //Router
 app.use('/', require('./routes/public.routes'))
-app.use('/all', require('./routes/public.routes'))
+app.use('/all', routerPublic)
 app.use('/jobs', routerJobs)
 app.use('/auth', routerAuth)
 
