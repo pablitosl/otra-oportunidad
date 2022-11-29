@@ -59,6 +59,7 @@ const logout = async (req, res) => {
 module.exports = {
     getFormSingUp,
     signUp,
+    signIn,
     getFormSingIn,
     logout,
 }

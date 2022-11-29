@@ -9,6 +9,7 @@ routerAuth.get('/signup', getFormSingUp)
 routerAuth.post('/signup', signUp)
 
 routerAuth.get('/signin', getFormSingIn)
+routerAuth.post('/signin', signIn)
 
 routerAuth.get('/logout', logout)
 
