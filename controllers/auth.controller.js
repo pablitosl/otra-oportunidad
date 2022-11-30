@@ -2,7 +2,7 @@ const passport = require('passport')
 
 const Auth = require('../models/auth.model')
 
-const getFormSingUp = (req, res) => res.render('./auth/signup', {layout: 'signupMain'})
+const getFormSingUp = (req, res) => res.render('/auth/signup', {layout: 'signupMain'})
 
 const signUp = async (req, res) => {
 
@@ -36,7 +36,7 @@ const signUp = async (req, res) => {
 
         await newUser.save() //Guardo el modelo
 
-        res.send('Cuenta creada')
+        res.redirect('/jobs')
     } catch (error) {
         console.log('Error', error)
     }
