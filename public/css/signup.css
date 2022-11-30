@@ -7,6 +7,7 @@ body {
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(to right, #006494, #F5F5F5);
     display: flex;
+    
     padding: 0;
     flex-direction: column;
     
@@ -14,6 +15,7 @@ body {
 .signin-wrapper {
     margin: 0;
     font-family: 'Poppins', sans-serif;
+    
     display: flex;
     justify-content: center;
     align-items: center;

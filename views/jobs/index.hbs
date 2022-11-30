@@ -1,32 +1,36 @@
-    <header>
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <div class="container-fluid">
-                <a class="navbar-brand" href="/"><img src="../../media/logo.png" alt="logo" /></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="active nav_link" aria-current="page" href="/">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav_link" href="/all">Empleos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class=" nav_link" href="#">Contacto</a>
-                        </li>
-                    </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                        {{!-- <a id="toast" class="btn btn-outline-danger">Cerrar Sesion</a> --}}
-                        <button onclick="showAlert()" class="btn btn-outline-danger btnCerrar" type="button">Cerrar Sesion</button>
-                    </form>
-                    </div>
-                </div>
-                </div>
-            </nav>
-        </header>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/"><img src="../../media/logo.png" alt="logo" /></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="active nav_link" aria-current="page" href="/">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav_link" href="/all">Empleos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class=" nav_link" href="#">Contacto</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                    {{!-- <a id="toast" class="btn btn-outline-danger">Cerrar Sesion</a> --}}
+                    <button class="btn btn-primary" type="button">{{name}}</button>
+                    <button onclick="showAlert()" class="btn btn-outline-danger btnCerrar" type="button">Cerrar
+                        Sesion</button>
+                </form>
+            </div>
+        </div>
+        </div>
+    </nav>
+</header>
 <main class="container mt-3">
     <h1 class="text-center m-4">Listado de Empleos (Privado Empresa)</h1>
     <a class="btn btn-success  m-3" href="/jobs/create">Crear Empleo</a>
@@ -49,13 +53,5 @@
             {{this.createdAt}}
         </div>
     </div>
-<<<<<<< HEAD
-    <div class="card-footer text-muted" id="date">
-        {{this.createdAt}}
-    </div>
-</div>
-{{/each}}
-=======
     {{/each}}
 </main>
->>>>>>> c221132a282ec57b894833aafd89bc00c8c0ebbf
