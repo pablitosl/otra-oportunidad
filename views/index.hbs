@@ -1,12 +1,14 @@
 
 <h1>Listado de Empleos (Publico)</h1>
-
+<button onclick="sort()">aaaaaa</button>
+<p>////////////////////////////////</p>
 {{#each jobs}}
    <div class="card text-center mt-3">
       <div class="card-header">{{this.enterprise}}</div>
       <div class="card-body">
          <h5 class="card-title">{{this.title}}</h5>
          <p class="card-text">{{this.description}}</p>
+         <p class="card-text">{{this.location}}</p>
       </div>
       <a class="btn btn-success mt-5" href="/all/{{this._id}}">Detalles</a>
       <div class="card-footer text-muted">

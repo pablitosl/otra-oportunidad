@@ -1,3 +1,4 @@
+const authModel = require("../models/auth.model")
 const jobModel = require("../models/job.model")
 
 const getAll = async (req, res) => {
@@ -7,9 +8,9 @@ const getAll = async (req, res) => {
         const jobs = await jobModel.find({}).lean() // .lean() => Dejarme lo que devuelve como un objeto vanilla javascript
 
         //Verifico que existan
-
-        res.status(200).render('jobs/index', { jobs, title: 'Tus empleos - Otra Oportunidad' })
-
+        jobs.user = req.user.name
+        console.log(req.user.name)
+        res.status(200).render('jobs/index', { jobs, title: 'Tus empleos - Otra Oportunidad', name: `${jobs.user}` })
     } catch (error) {
         console.log(error)
     }
