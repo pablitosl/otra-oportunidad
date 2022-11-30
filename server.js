@@ -19,6 +19,7 @@ const app = express()
 //Configuracion de handlebars
 app.engine('hbs', engine({ extname: '.hbs' }))
 app.set('view engine', 'hbs')
+app.set('views', __dirname + '/views')
 require('./config/passport')
 
 //Middleware
@@ -43,7 +44,7 @@ app.use((req, res, next) =>{
 })
 
 //Router
-app.use('/', routerPublic)
+app.use('/', require('./routes/public.routes'))
 app.use('/all', routerPublic)
 app.use('/jobs', routerJobs)
 app.use('/auth', routerAuth)
