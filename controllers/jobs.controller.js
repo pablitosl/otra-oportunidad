@@ -23,7 +23,7 @@ const getOne = async (req, res) => {
         const job = await jobModel.findById(id).lean() // .lean() => Dejarme lo que devuelve como un objeto vanilla javascript
         // console.log(pelicula)
 
-        res.render('jobs/show', { job, title: `Video Club - Viendo: ${job.title}`})
+        res.render('jobs/show', { job, title: ` ${job.title}`})
     } catch (error) {
         console.log('Error en getOne', error)
     }
