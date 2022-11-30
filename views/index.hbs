@@ -32,6 +32,24 @@
 <main class="container mt-3">
    <h1 class="text-center m-4">Listado de Empleos</h1>
 
+
+{{!--    <form action="/all" method="GET">
+    <select name="order" form="locationForm">
+        <option value="CABA">CABA</option>
+        <option value="Buenos Aires">Buenos Aires</option>
+    </select>
+    <button type="submit">filtrar</button>
+   </form> --}}
+
+{{!--     <form action="/all" method="GET" id="sort-form">
+     <select class="form-select text-center" name="sort" id="sort" onchange="sort-form.submit()">
+       <option value="a-z"{{#if sort.a-z}}selected{{/if}}>A->Z</option>
+       <option value="z-a"{{#if sort.z-a}}selected{{/if}}>Z->A</option>
+       <option value="category" {{#if sort.category}}selected{{/if}}>類別</option>
+       <option value="location" {{#if sort.location}}selected{{/if}}>地址</option>
+     </select>
+   </form> --}}
+
 {{#each jobs}}
    <div class="card text-center mt-5">
       <div class="card-header">{{this.enterprise}}</div>
