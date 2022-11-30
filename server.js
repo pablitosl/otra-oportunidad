@@ -20,7 +20,6 @@ const app = express()
 app.engine('hbs', engine({ extname: '.hbs' }))
 app.set('view engine', 'hbs')
 /* app.set('views', __dirname + '/views') */
-app.set('views', path.join(__dirname, '/views'))
 require('./config/passport')
 
 //Middleware
