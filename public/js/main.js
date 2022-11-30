@@ -1,3 +1,8 @@
+const btnAtras = document.getElementById('btnAtras');
+btnAtras.addEventListener('click', () => {
+    window.history.back();
+});
+
 
 function showAlert() {
     Swal.fire({

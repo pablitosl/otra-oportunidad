@@ -1,52 +1,61 @@
-{{! NAV BAR }}
-<nav class="navbar navbar-expand-lg bg-light h-auto p-3">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item fs-3">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item fs-3">
-                    <a class="nav-link active" aria-current="page" href="#">Empleos</a>
-                </li>
-                <li class="nav-item fs-3">
-                    <a class="nav-link active" aria-current="page" href="#">Nosotros</a>
-                </li>
-            </ul>
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                <p>{{name}}</p>
-                {{!-- <a id="toast" class="btn btn-outline-danger">Cerrar Sesion</a> --}}
-                <button onclick="showAlert()" class="btn btn-outline-danger" type="button">Cerrar Sesion</button>
+    <header>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid">
+                <a class="navbar-brand" href="/"><img src="../../media/logo.png" alt="logo" /></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="active nav_link" aria-current="page" href="/">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav_link" href="/all">Empleos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class=" nav_link" href="#">Contacto</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                        {{!-- <a id="toast" class="btn btn-outline-danger">Cerrar Sesion</a> --}}
+                        <button onclick="showAlert()" class="btn btn-outline-danger btnCerrar" type="button">Cerrar Sesion</button>
+                    </form>
+                    </div>
+                </div>
+                </div>
+            </nav>
+        </header>
+<main class="container mt-3">
+    <h1 class="text-center m-4">Listado de Empleos (Privado Empresa)</h1>
+    <a class="btn btn-success  m-3" href="/jobs/create">Crear Empleo</a>
+
+
+
+    {{#each jobs}}
+    <div class="card text-center mt-3">
+        <div class="card-header">{{this.enterprise}}</div>
+        <div class="card-body">
+            <h5 class="card-title">{{this.title}}</h5>
+            <p class="card-text">{{this.description}}</p>
+            <a href="/jobs/{{this._id}}" class="btn btn-primary">Detalles</a>
+            <a href="/jobs/edit/{{this._id}}" class="btn btn-warning">Editar</a>
+            <form class="d-inline" action="/jobs/{{this._id}}?_method=DELETE" method="post">
+                <button class="btn btn-danger">Eliminar</button>
             </form>
-
-</nav>
-
-<h1>Listado de Empleos (Privado)</h1>
-
-<a class="btn btn-success mt-5" href="/jobs/create">Crear Empleo</a>
-
-
-
-{{#each jobs}}
-<div class="card text-center mt-3">
-    <div class="card-header">{{this.enterprise}}</div>
-    <div class="card-body">
-        <h5 class="card-title">{{this.title}}</h5>
-        <p class="card-text">{{this.description}}</p>
-        <a href="/jobs/{{this._id}}" class="btn btn-primary">Detalles</a>
-        <a href="/jobs/edit/{{this._id}}" class="btn btn-warning">Editar</a>
-        <form class="d-inline" action="/jobs/{{this._id}}?_method=DELETE" method="post">
-            <button class="btn btn-danger">Eliminar</button>
-        </form>
+        </div>
+        <div class="card-footer text-muted">
+            {{this.createdAt}}
+        </div>
     </div>
+<<<<<<< HEAD
     <div class="card-footer text-muted" id="date">
         {{this.createdAt}}
     </div>
 </div>
 {{/each}}
+=======
+    {{/each}}
+</main>
+>>>>>>> c221132a282ec57b894833aafd89bc00c8c0ebbf

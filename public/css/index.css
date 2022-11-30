@@ -249,7 +249,12 @@ footer span{
     margin: .5rem auto;
 }
 
-
+.btnCerrar{
+    font-weight: 600;
+    font-size: 1.2rem;
+    background-color: rgba(255, 0, 0, 0.259);
+    color: red;
+}
 
 /*Seccion RESPONSIVE*/
 /*Mejorar al 100% el responsive*/
@@ -341,19 +346,28 @@ footer span{
         font-size: 1.7rem;
         margin: 10px 0;
     }
+    .div_beneficios{
+        width: 100%;
+        padding: 1rem;
+    }
     .div_beneficios h2{
-        font-size: 4rem;
-        margin-bottom: 1.6rem;
+        font-size: 3.8rem;
+        margin-bottom: 1.5rem;
     }
     .div_beneficios p{
-        font-size: 1.5rem;
+        font-size: 1.4rem;
+
+    }
+    .div_img{
+        width: auto;
+        padding: 1rem;
     }
     .seccion_tres h3{
-        font-size: 4rem;
+        font-size: 3.8rem;
         margin-bottom: 2rem;
     }
     .seccion_tres p{
-        font-size: 1.6rem;
+        font-size: 1.4rem;
         width: 90%;
         margin-bottom: 2rem;
     }
