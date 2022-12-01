@@ -83,6 +83,7 @@ nav::before{
     padding: 4rem;
     border-radius: 10px;
     position: relative;
+    text-align: center;
 }
 
 .login-card::before {
@@ -147,11 +148,12 @@ nav::before{
     gap: 1.5rem;
 }
 
-.login-card-form .form-item {
+.form-item{
     position: relative;
+    margin-bottom: 10px;
 }
 
-.login-card-form .form-item .form-item-icon {
+.form-item-icon {
     position: absolute;
     top: .82rem;
     left: 1.4rem;
