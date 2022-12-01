@@ -49,7 +49,7 @@ nav::before{
     margin-top: 5px;
 }
 .login_span{
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 500;
 }
 .btn_login{
@@ -234,6 +234,7 @@ footer{
 .card{
     box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.75);
     margin: 6px 12px;
+    padding-bottom: 1rem;
 }
 .card-body{
     text-align: center;
@@ -257,6 +258,27 @@ footer span{
     color: hsl(0, 0%, 5%);
     margin: .5rem auto;
 }
+
+/*SECCION NOSOTROS*/
+.nosotrosP{
+    margin-bottom: 2rem;
+}
+.btnRedes{
+    background-color: peachpuff;
+    width: 35px;
+    font-size: 1.3rem;
+    height: 35px;
+    padding: 1rem;
+    margin: .7rem;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.75);
+    text-align: center;
+}
+
+
+
 
 .btnCerrar{
     font-weight: 600;
