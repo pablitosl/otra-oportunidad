@@ -8,7 +8,11 @@
     scroll-behavior: smooth;
 }
 body {
-    background: linear-gradient(to right, #006494, #F5F5F5);
+    background-image: url("data:image/svg+xml,%3Csvg width='100%25' height='100%25' id='svg' viewBox='0 0 1440 700' xmlns='http://www.w3.org/2000/svg' class='transition duration-300 ease-in-out delay-150'%3E%3Cpath d='M 0,700 C 0,700 0,175 0,175 C 87.88974358974357,184.53333333333333 175.77948717948715,194.06666666666666 266,177 C 356.22051282051285,159.93333333333334 448.7717948717949,116.26666666666665 521,119 C 593.2282051282051,121.73333333333335 645.1333333333333,170.86666666666667 716,193 C 786.8666666666667,215.13333333333333 876.6948717948719,210.26666666666668 964,198 C 1051.305128205128,185.73333333333332 1136.0871794871796,166.06666666666666 1215,161 C 1293.9128205128204,155.93333333333334 1366.9564102564102,165.46666666666667 1440,175 C 1440,175 1440,700 1440,700 Z' stroke='none' stroke-width='0' fill='%230693e3' fill-opacity='0.4' class='transition-all duration-300 ease-in-out delay-150 path-0'%3E%3C/path%3E%3Cpath d='M 0,700 C 0,700 0,350 0,350 C 67.1820512820513,334.5205128205128 134.3641025641026,319.0410256410256 216,329 C 297.6358974358974,338.9589743589744 393.72564102564104,374.35641025641024 487,368 C 580.274358974359,361.64358974358976 670.7333333333333,313.5333333333333 734,296 C 797.2666666666667,278.4666666666667 833.3410256410258,291.5102564102565 919,306 C 1004.6589743589742,320.4897435897435 1139.902564102564,336.42564102564097 1235,344 C 1330.097435897436,351.57435897435903 1385.0487179487181,350.7871794871795 1440,350 C 1440,350 1440,700 1440,700 Z' stroke='none' stroke-width='0' fill='%230693e3' fill-opacity='0.53' class='transition-all duration-300 ease-in-out delay-150 path-1'%3E%3C/path%3E%3Cpath d='M 0,700 C 0,700 0,525 0,525 C 79.75128205128203,503.9153846153846 159.50256410256407,482.83076923076925 240,490 C 320.49743589743593,497.16923076923075 401.74102564102566,532.5923076923077 485,539 C 568.2589743589743,545.4076923076923 653.5333333333334,522.8 727,521 C 800.4666666666666,519.2 862.125641025641,538.2076923076922 935,548 C 1007.874358974359,557.7923076923078 1091.9641025641026,558.3692307692307 1178,553 C 1264.0358974358974,547.6307692307693 1352.0179487179487,536.3153846153846 1440,525 C 1440,525 1440,700 1440,700 Z' stroke='none' stroke-width='0' fill='%230693e3' fill-opacity='1' class='transition-all duration-300 ease-in-out delay-150 path-2'%3E%3C/path%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: 'Raleway', sans-serif;
 }
 
 /* HEADER */
@@ -63,6 +67,7 @@ nav::before{
     text-decoration: none;
     margin: 2px 7px;
     letter-spacing: 1px;
+    transition: all .5s;
 }
 
 /*MAIN*/
@@ -70,7 +75,7 @@ nav::before{
 .seccion_uno{
     display: flex;
     justify-content: space-between;
-    background: #F5F5F5;
+    background: #e8f1f2;
 }
 
 .div_presentacion{
@@ -109,6 +114,7 @@ nav::before{
     text-decoration: none;
     margin: 10px 0;
     cursor: pointer;
+    transition: all .5s;
 }
 
 .div_video{
@@ -126,7 +132,7 @@ nav::before{
 .seccion_dos{
     display: flex;
     justify-content: space-between;
-    /* background: #F5F5F5; */
+    background: #F5F5F5; 
 }
 .div_beneficios{
     width: 50%;
@@ -142,20 +148,20 @@ nav::before{
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
     font-size: 4.5rem;
-    color: #f5f5f5;
+    color: hsl(0, 0%, 15%);
     margin-bottom: 2rem;
 }
 .div_beneficios p{
     font-family: 'Raleway', sans-serif;
     font-weight: 300;
     font-size: 2rem;
-    color: #f5f5f5;
+    color: hsl(0, 0%, 30%);
     letter-spacing: 1px;
 }
 .div_img{
     width: 50%;
     padding: 4rem;
-    padding-bottom: 0;
+    padding-bottom: 10px;
     height: fit-content;
 }
 .div_img img{
@@ -170,6 +176,7 @@ nav::before{
     justify-content: center;
     align-items: center;
     background-color: #e8f1f2;
+    padding-bottom: 2rem;
 }
 .seccion_tres h3{
     font-family: 'Raleway', sans-serif;
@@ -194,13 +201,14 @@ nav::before{
     align-items: center;
     flex-wrap: wrap;
     width: 80%;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 .div_empresa{
     width: 120px;
     height: 120px;
     margin: 0 50px;
     text-align: center;
+    display: flex;
 }
 #chico{
     width: 90px;
@@ -208,6 +216,7 @@ nav::before{
 }
 .div_empresa img{
     width: 100%;
+    align-self: center;
 }
 
 /*FOOTER*/

@@ -2,10 +2,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-body {
+.body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(to right, #006494, #F5F5F5);
+    background: linear-gradient(to bottom, #006494, #F5F5F5);
     display: flex;
     padding: 0;
     flex-direction: column;
@@ -257,6 +257,7 @@ nav::before{
     background-color: rgba(255, 255, 255, .6);
     border-radius: 100px;
     transition: all .5s;
+    box-shadow: 0 0 15px 3px rgba(0, 0, 0, .3);
 }
 
 .login-card-social-btns a:hover {
@@ -269,7 +270,7 @@ nav::before{
 /* Responsive */
 @media (max-width: 768px) {
 
-    body {
+    .body {
         padding: 2rem 0;
     }
 
@@ -278,4 +279,11 @@ nav::before{
         padding: 2rem;
     }
 
+}
+@media screen and (max-width:570px) {
+    .btn_login{
+        padding: 0.3rem 1rem;
+        font-size: 1.5rem;
+        margin: 2px 7px;
+    }
 }

@@ -2,7 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-body {
+.body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(to right, #006494, #F5F5F5);
@@ -272,7 +272,7 @@ nav::before{
 /* Responsive */
 @media (max-width: 768px) {
 
-    body {
+    .body {
         padding: 2rem 0;
     }
 
@@ -281,4 +281,11 @@ nav::before{
         padding: 2rem;
     }
 
+}
+@media screen and (max-width:570px) {
+    .btn_login{
+        padding: 0.3rem 1rem;
+        font-size: 1.5rem;
+        margin: 2px 7px;
+    }
 }
