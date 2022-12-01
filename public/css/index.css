@@ -37,7 +37,7 @@ nav::before{
 }
 .nav_link:hover{
     transition: 0.3s;
-    color: #f5f5f5;
+    color: #18A0FB;
 }
 .ul_login{
     display: flex;
