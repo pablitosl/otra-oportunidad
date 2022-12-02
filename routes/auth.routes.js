@@ -5,6 +5,10 @@ const { getFormSingUp, signUp, getFormSingIn, signIn, logout } = require('../con
 
 // Routers Auth
 
+routerAuth.post('/add', function(req, res, next) {
+    res.status(201).render('new', { isAdded : true } );
+ });
+
 routerAuth.get('/signup', getFormSingUp)
 routerAuth.post('/signup', signUp)
 

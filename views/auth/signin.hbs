@@ -39,13 +39,16 @@
         </path>
     </symbol>
 </svg>
+{{#if todo_error}}
+    <div>{{todo_error}}</div>
+{{/if}}
+
 <form id="form_signIn" action="/auth/signin" method="POST">
     <div class="signin-wrapper">
         <!--SIGN IN--->
         <div class="login-card-container">
             <div class="login-card">
                 <div class="login-card-logo">
-
                 </div>
                 <div class="login-card-header">
                     <h1>Bienvenido</h1>

@@ -2,14 +2,13 @@ const passport = require('passport')
 
 const Auth = require('../models/auth.model')
 
-const getFormSingUp = (req, res) => res.render('auth/signup', {layout: 'signupMain'})
+const getFormSingUp = (req, res) => res.render('./auth/signup', { layout: 'signupMain' })
 
 const signUp = async (req, res) => {
 
     try {
         const errors = []
         const { name, email, password, confirm_password } = req.body
-        console.log(name, email, password, confirm_password)
 
         if (password !== confirm_password) {
             errors.push({ msg: 'Las contraseñas no coinciden' })
@@ -42,16 +41,15 @@ const signUp = async (req, res) => {
     }
 
 }
-const getFormSingIn = (req, res) => res.render('./auth/signin', {layout: 'signinMain'})
+const getFormSingIn = (req, res) => res.render('./auth/signin', { layout: 'signinMain' })
 
 const signIn = passport.authenticate('local', {
     successRedirect: '/jobs',
-    failureRedirect: '/auth/signin'
+    failureRedirect: '/auth/signin',
 })
-
 const logout = async (req, res) => {
-    await req.logout( err => {
-        if( err ) return next()
+    await req.logout(err => {
+        if (err) return next()
         res.redirect('/auth/signin')
     })
 }
