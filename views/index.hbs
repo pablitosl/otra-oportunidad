@@ -19,7 +19,7 @@
                   </ul>
                   <div class="ul_login">
                      <span class="login_span">¿Sos empresa? Registrate y publica</span>
-                     <div>
+                     <div class="pb-2">
                         <a class="btn_login" href="/auth/signin">Login</a>
                         <a class="btn_login" href="/auth/signup">Registrarse</a>
                      </div>
@@ -29,8 +29,8 @@
             </div>
          </nav>
 </header>
-<main class="container mt-3">
-   <h1 class="text-center m-4">Listado de Empleos</h1>
+<main class="container-fluid mt-3">
+   <h1 class="text-center m-5 ">Listado de Empleos</h1>
 
 
 {{!--    <form action="/all" method="GET">
@@ -49,20 +49,84 @@
        <option value="location" {{#if sort.location}}selected{{/if}}>地址</option>
      </select>
    </form> --}}
-
-{{#each jobs}}
-   <div class="card text-center mt-5">
-      <div class="card-header">{{this.enterprise}}</div>
-      <div class="card-body">
-         <h5 class="card-title">{{this.title}}</h5>
-         <p class="card-text"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" width="18" height="18"><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 256c-35.3 0-64-28.7-64-64s28.7-64 64-64s64 28.7 64 64s-28.7 64-64 64z"/></svg> Argentina</p>
-         <p class="card-text">{{this.description}}</p>
-         <p class="card-text">{{this.location}}</p>
-      </div>
-      <a class="btn btn-success mt-5" href="/all/{{this._id}}">Detalles</a>
-      <div id="hora" class="card-footer text-muted">
-         {{this.createdAt}}
-      </div>
+   <div class="empleos">
+      <section class="fw-bold sectionOne">
+            <div class="form-check mb-2">
+               <input class="form-check-input" type="checkbox" value="Front End" id="flexCheckChecked">
+               <label class="form-check-label" for="flexCheckChecked">
+                  Front End
+               </label>
+            </div>
+            <div class="form-check mb-2">
+               <input class="form-check-input" type="checkbox" value="Full Stack" id="flexCheckChecked">
+               <label class="form-check-label" for="flexCheckChecked">
+                  Full Stack
+               </label>
+            </div>
+            <div class="form-check mb-2">
+               <input class="form-check-input" type="checkbox" value="Back End" id="flexCheckChecked">
+               <label class="form-check-label" for="flexCheckChecked">
+                  Back End
+               </label>
+            </div>
+            <div class="form-check mb-2">
+               <input class="form-check-input" type="checkbox" value="Soporte Tecnico" id="flexCheckChecked">
+               <label class="form-check-label" for="flexCheckChecked">
+                  Soporte Tecnico
+               </label>
+            </div>
+            <div class="form-check mb-2">
+               <input class="form-check-input" type="checkbox" value="Help Desk" id="flexCheckChecked">
+               <label class="form-check-label" for="flexCheckChecked">
+                  Help Desk
+               </label>
+            </div>
+            <div class="form-check mb-2">
+               <input class="form-check-input" type="checkbox" value="Orientador" id="flexCheckChecked">
+               <label class="form-check-label" for="flexCheckChecked">
+                  Orientador
+               </label>
+            </div>
+            <div class="form-check mb-2">
+               <input class="form-check-input" type="checkbox" value="Bootcamp" id="flexCheckChecked">
+               <label class="form-check-label" for="flexCheckChecked">
+                  Bootcamp
+               </label>
+            </div>
+            <div class="form-check mb-2">
+               <input class="form-check-input" type="checkbox" value="Scrum Master" id="flexCheckChecked">
+               <label class="form-check-label" for="flexCheckChecked">
+                  Scrum Master
+               </label>
+            </div>
+            <div class="form-check mb-2">
+               <input class="form-check-input" type="checkbox" value="Recruiter" id="flexCheckChecked">
+               <label class="form-check-label" for="flexCheckChecked">
+                  Recruiter
+               </label>
+            </div>
+            <div class="form-check mb-2">
+               <input class="form-check-input" type="checkbox" value="Diseñador UX/UI" id="flexCheckChecked">
+               <label class="form-check-label" for="flexCheckChecked">
+                  Diseñador UX/UI
+               </label>
+            </div>
+      </section>
+      <section>
+      {{#each jobs}}
+         <div class="card text-center m-4 ">
+            <div class="card-header fs-4 fw-semibold">{{this.enterprise}}</div>
+            <div class="card-body">
+               <h5 class="card-title fs-5 fw-semibold">{{this.title}}</h5>
+               <p class="card-text"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" width="18" height="18"><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 256c-35.3 0-64-28.7-64-64s28.7-64 64-64s64 28.7 64 64s-28.7 64-64 64z"/></svg> {{this.location}}</p>
+               <p class="card-text">{{this.description}}</p>
+            </div>
+            <a class="btn btn-success mt-5" href="/all/{{this._id}}">Detalles</a>
+            <div id="hora" class="card-footer text-muted">
+               {{this.createdAt}}
+            </div>
+         </div>
+      {{/each}}
+      </section>
    </div>
-{{/each}}
 </main>

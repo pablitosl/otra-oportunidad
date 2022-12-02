@@ -277,6 +277,7 @@ nav::before{
     .login-card {
         width: 280px;
         padding: 2rem;
+        margin-top: 2rem;
     }
 
 }

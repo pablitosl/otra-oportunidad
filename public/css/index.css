@@ -251,8 +251,8 @@ footer{
 }
 .card{
     box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.75);
-    margin: 6px 12px;
     padding-bottom: 1rem;
+    background-color: #e8f1f2;
 }
 .card-body{
     text-align: center;
@@ -295,7 +295,22 @@ footer span{
     text-align: center;
 }
 
-
+/*SECCION EMPLEOS*/
+.empleos{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2rem;
+}
+.sectionOne{
+    background-color: rgba(var(--bs-dark-rgb));
+    opacity: 0.7;
+    margin: 1.5rem;
+    font-size: 1.25rem;
+    padding: 3rem;
+    color: #F5F5F5;
+    border-radius: 0.375rem;
+    height: fit-content;
+}
 
 
 .btnCerrar{
@@ -371,6 +386,17 @@ footer span{
     .div_img{
         width: 70%;
         padding: 1rem;
+    }
+    .empleos{
+        flex-direction: column;
+    }
+    .sectionOne{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 1rem;
+    }
+    .sectionOne div{
+        margin-right: 10px;
     }
 }
 /*Celular*/
