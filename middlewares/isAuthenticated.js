@@ -4,7 +4,6 @@ const isAuthenticated = (req, res, next) => {
         return next()
     }
     res.redirect('/auth/signin') // Si no es autenticado, se tiene que loguear
-    req.flash('todo_error', 'aaaaaaaaaaaaaaaaaaaaaaaaa')
 }
 
 
