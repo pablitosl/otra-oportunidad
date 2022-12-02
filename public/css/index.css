@@ -226,6 +226,15 @@ footer{
     justify-content: space-between;
     background: #F5F5F5;
 }
+.title_nosotros{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: hsl(0, 0%, 15%);
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    text-align: center;
+}
 .footer_contacto{
     display: flex;
     justify-content: center;
