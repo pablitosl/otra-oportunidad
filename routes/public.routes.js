@@ -31,6 +31,9 @@ routerPublic.get('/all', async (req, res) => {
         const jobs = await jobModel.find({}).lean() // .lean() => Dejarme lo que devuelve como un objeto vanilla javascript
         //Verifico que existan
 
+/*         const date = await jobModel.find(timestamps).lean()
+        console.log(date) */
+
         res.status(200).render('index', { layout: 'main', jobs })
 
 
