@@ -18,11 +18,9 @@ body {
 /* HEADER */
 
 nav{
-    background: rgba(255, 255, 255, .5);
+    background: rgba(255, 255, 255, .8);
 }
-nav::before{
-    background: rgba(255, 255, 255, .15);
-}
+
 .navbar{
     padding: 0;
 }
@@ -75,7 +73,11 @@ nav::before{
 .seccion_uno{
     display: flex;
     justify-content: space-between;
-    background: #e8f1f2;
+    background: rgb(215,255,243);
+  background: linear-gradient(90deg, rgba(215,255,243,1) 0%, rgba(148,187,233,1) 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .div_presentacion{
@@ -132,7 +134,11 @@ nav::before{
 .seccion_dos{
     display: flex;
     justify-content: space-between;
-    background: #F5F5F5; 
+    background: rgb(215,255,243);
+    background: linear-gradient(90deg, rgba(215,255,243,1) 0%, rgba(148,187,233,1) 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
 }
 .div_beneficios{
     width: 50%;
@@ -175,8 +181,12 @@ nav::before{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #e8f1f2;
+    background: rgb(215,255,243);
+    background: linear-gradient(90deg, rgba(215,255,243,1) 0%, rgba(148,187,233,1) 100%);
     padding-bottom: 2rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 .seccion_tres h3{
     font-family: 'Raleway', sans-serif;
@@ -191,7 +201,7 @@ nav::before{
     font-weight: 300;
     font-size: 2rem;
     width: 90%;
-    color: hsl(0, 0%, 25%);
+    color: hsl(0, 0%, 30%);
     letter-spacing: 1px;
     margin-bottom: 2rem;
 }
@@ -505,8 +515,17 @@ footer{
     border-radius: 0.375rem;
     height: fit-content;
 }
-
-
+.cardEmpleo{
+  background-color: hsla(206, 100%, 6%, 0.97);
+  color:#F5F5F5;
+  padding-bottom: 0;
+}
+.svg{
+  width: 18px;
+  height: 18px;
+  color: #F5F5F5;
+  text-shadow: 0 0 1px #F5F5F5;
+}
 .btnCerrar{
     font-weight: 600;
     font-size: 1.2rem;
