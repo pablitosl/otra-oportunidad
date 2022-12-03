@@ -17,9 +17,9 @@ require('dotenv').config()
 const app = express()
 
 //Configuracion de handlebars
-app.engine('hbs', engine({ extname: '.hbs' }))
-app.set('view engine', 'hbs')
-/* app.set('views', __dirname + '/views') */
+app.engine('.hbs', engine({ extname: '.hbs' }))
+app.set('view engine', '.hbs')
+app.set('views', './views')
 require('./config/passport')
 
 //Middleware
