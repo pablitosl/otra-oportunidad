@@ -2,7 +2,7 @@ const passport = require('passport')
 
 const Auth = require('../models/auth.model')
 
-const getFormSingUp = (req, res) => res.render('signup', { layout: 'signupMain' })
+const getFormSingUp = (req, res) => res.render('./auth/signin', { layout: 'signupMain' })
 
 const signUp = async (req, res) => {
 
