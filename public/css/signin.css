@@ -12,14 +12,12 @@
     
 }
 .signin-wrapper {
-    margin: 0;
+    margin: 1rem;
     font-family: 'Poppins', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative; 
-    margin-bottom: 3em;
-    min-height: 100vh;
+    position: relative;
     flex-direction: column;
 }
 /* HEADER */
@@ -64,17 +62,105 @@ nav::before{
     font-weight: 500;
 }
 .btn_login{
-    background: #18A0FB;
-    border-radius: 5px;
     padding: 0.5rem 1.5rem;
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
-    font-size: 1.7rem;
+    font-size: 1.2rem;
     color: hsl(0, 0%, 85%);
     text-decoration: none;
     margin: 2px 7px;
     letter-spacing: 1px;
+    transition: all .5s;
+} 
+.main_div {
+  --color: #3992e6;
+  position: relative;
+  z-index: 1;
+ }
+ 
+ .main_div::before {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  top: -7px;
+  left: -7px;
+  z-index: -5;
+  border-top: 3px solid var(--color);
+  border-left: 3px solid var(--color);
+  transition: 0.5s;
+ }
+ 
+ .main_div::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  bottom: -7px;
+  right: -7px;
+  z-index: -5;
+  border-right: 3px solid var(--color);
+  border-bottom: 3px solid var(--color);
+  transition: 0.5s;
+ }
+ 
+ .main_div:hover::before {
+  width: 100%;
+  height: 100%;
+ }
+ 
+ .main_div:hover::after {
+  width: 100%;
+  height: 100%;
+ }
+ 
+ .main_div button {
+  padding: 0.7em 2em;
+  font-size: 16px;
+  background: #222222;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+ }
+
+.login_registro{
+    background: #222222;
+    color: #F5F5F5;
+    text-align: center;
+    padding: 1rem;
+    width: fit-content;
+    border-radius: 10px;
+    border: 1px solid #0dcaf0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin:auto;
 }
+.login_registro p{
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 1px;
+    margin: 0;
+}
+.login_registro button{
+    padding: 0.5rem 1.5rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: gray;
+    text-decoration: none;
+    margin: 2px 7px;
+    letter-spacing: 1px;
+    transition: all .5s;
+}
+
+
+
 
 /* Login Card */
 .login-card {

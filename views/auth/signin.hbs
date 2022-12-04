@@ -22,11 +22,9 @@
                 </ul>
                 <div class="ul_login">
                     <span class="login_span">¿Sos empresa? Registrate y publica</span>
-                    <div>
-                        <a class="btn_login" href="/auth/signin">Login</a>
-                        <a class="btn_login" href="/auth/signin">Registrarse</a>
+                    <div class="main_div">
+                        <button><a class="btn_login" href="/auth/signin">Login</a></button>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -43,8 +41,20 @@
     <div>{{todo_error}}</div>
 {{/if}}
 
+<div class="login_registro">
+        <div>
+            <p>¿Todavia no tenes una cuenta?</p>
+            <button id="btnRegistrar" class="btn btn-info">Registrate</button>
+        </div>
+        <div>
+            <p>¿Ya tenes una cuenta?</p>
+            <button id="btnLogin" class="btn btn-info ">Logueate</button>
+        </div>
+    </div>
+
 <div class="form-wrapper">
-    <form action="/auth/signup" method="POST">
+    
+    <form id="form_signUp" class="d-none" action="/auth/signup" method="POST">
         <div class="signin-wrapper">
             <!--SIGN UP--->
             <div class="login-card-container">
@@ -82,9 +92,6 @@
                         </div>
                         <button type="submit">Registrarse</button>
                     </form>
-                    <div class="login-card-footer">
-                        ¿Ya tienes una cuenta? <a href="/auth/signin">Inicia sesion</a>
-                    </div>
                 </div>
                 <div class="login-card-social">
                     <div>O inicia sesion con</div>
@@ -112,7 +119,7 @@
     </form>
 
 
-    <form id="form_signIn" action="/auth/signin" method="POST">
+    <form id="form_signIn" class="d-block" action="/auth/signin" method="POST">
         <div class="signin-wrapper">
             <!--SIGN IN--->
             <div class="login-card-container">
@@ -139,11 +146,8 @@
                             </div>
                             <a href="#"></a>
                         </div>
-                        <button type="submit">inicias Sesion</button>
+                        <button type="submit">iniciar Sesion</button>
                     </form>
-                    <div class="login-card-footer">
-                        ¿Todavia no tienes una cuenta? <a href="/auth/signup">Crea una ahora.</a>
-                    </div>
                 </div>
                 <div class="login-card-social">
                     <div>O inicia sesion con</div>

@@ -1,13 +1,3 @@
-const btnAtras = document.getElementById('btnAtras');
-btnAtras.addEventListener('click', () => {
-    window.history.back();
-});
-
-const btnAtrasUser = document.getElementById('btnAtrasUser');
-btnAtras.addEventListener('click', () => {
-    window.history.back();
-});
-
 
 function showAlert() {
     Swal.fire({
@@ -24,3 +14,28 @@ function showAlert() {
         }
       })
 }
+
+//Intento de transicion de login
+
+
+id="form_signUp"
+id="form_signIn"
+
+const signUp = document.getElementById('form_signUp');
+const signIn = document.getElementById('form_signIn');
+const btnRegistrar = document.getElementById('btnRegistrar');
+const btnLogin = document.getElementById('btnLogin');
+
+btnRegistrar.addEventListener('click', e => {
+    e.preventDefault();
+    signUp.classList.remove('d-none');
+    signIn.classList.add('d-none');
+    signUp.classList.add('d-block');
+});
+
+btnLogin.addEventListener('click', e => {
+    e.preventDefault();
+    signIn.classList.remove('d-none');
+    signUp.classList.add('d-none');
+    signIn.classList.add('d-block');
+});

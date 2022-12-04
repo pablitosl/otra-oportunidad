@@ -9,7 +9,6 @@
     background-color: #18a0fb;
 }
 #div{
-    background-color: #e8f1f2;
     padding: 1.5rem;
     height: auto;
     width: 80%;
@@ -20,4 +19,8 @@
 }
 #div h1{
     text-align: center;
+}
+.hr{
+    width: 100%;
+    color: white;
 }

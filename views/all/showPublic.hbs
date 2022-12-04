@@ -1,11 +1,12 @@
 <div>
-    <button id="btnAtras">Volver Atras</button>
+    <button id="btnAtras"><a href="/all" class="nav-link">Volver Atras</a></button>
 </div>
-<div id="div">
+<div id="div" class="cardEmpleo">
     <h1>{{job.title}}</h1>
 
     <h2>{{job.enterprise}}</h2>
+    <hr class="hr">
     <p>{{job.description}}</p>
-    <p>{{job.phone}}</p>
-    <p>{{job.email}}</p>
+    <p>Telefono de Contacto: {{job.phone}}</p>
+    <p>Enviar CV a:  {{job.email}}</p>
 </div>
