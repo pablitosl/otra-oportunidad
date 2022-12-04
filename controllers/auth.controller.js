@@ -2,7 +2,7 @@ const passport = require('passport')
 
 const Auth = require('../models/auth.model')
 
-const getFormSingUp = (req, res) => res.render('./auth/signin', { layout: 'signupMain', helpers: {alert(){ return Swal.fire(aString); }}})
+const getFormSingUp = (req, res) => res.render('./auth/signin', { layout: 'signupMain', helpers: { alert() { return Swal.fire(aString); } } })
 
 const signUp = async (req, res) => {
 
@@ -34,7 +34,6 @@ const signUp = async (req, res) => {
         newUser.password = await newUser.passwordEncrypt(password) //Encripto la contraseña
 
         await newUser.save() //Guardo el modelo
-
         res.redirect('/jobs')
     } catch (error) {
         console.log('Error', error)
@@ -51,6 +50,9 @@ const signIn = passport.authenticate('local', {
 })
 
 
+const googleAuth = passport.authenticate('google', { scope: ['profile', 'email']})
+
+
 const logout = async (req, res) => {
     await req.logout(err => {
         if (err) return next()
@@ -63,5 +65,6 @@ module.exports = {
     signUp,
     signIn,
     getFormSingIn,
+    googleAuth,
     logout,
 }

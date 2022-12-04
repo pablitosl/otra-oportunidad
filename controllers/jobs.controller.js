@@ -9,7 +9,6 @@ const getAll = async (req, res) => {
 
         //Verifico que existan
         jobs.user = req.user.name
-        console.log(req.user.name)
         res.status(200).render('jobs/index', { jobs, title: 'Tus empleos - Otra Oportunidad', name: `${jobs.user}` })
     } catch (error) {
         console.log(error)

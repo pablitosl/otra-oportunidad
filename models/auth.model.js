@@ -3,6 +3,10 @@ const bcrypt = require('bcrypt')
 
 const AuthSchema = new mongoose.Schema(
     {
+        googleId: {
+            type: String,
+            required: false,
+        },
         name: {
             type: String,
             require: true
@@ -11,6 +15,9 @@ const AuthSchema = new mongoose.Schema(
             type: String,
             require: true,
             unique: true
+        },
+        image: {
+            type: String,
         },
         password: {
             type: String,
@@ -35,7 +42,7 @@ AuthSchema.methods.passwordEncrypt = async (password) => {
 // con el password que tiene almacenado en la BD. Para eso vuelve a hash
 // la contraseña ingresada en el formulario y la compara con la que esta
 // hasheada en la DB
-AuthSchema.methods.checkPassword = async function(password) {
+AuthSchema.methods.checkPassword = async function (password) {
     return await bcrypt.compare(password, this.password) //true o false
 }
 

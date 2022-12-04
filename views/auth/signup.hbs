@@ -1,0 +1,110 @@
+{{!HEADER }}
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/"><img src="../../media/logo.png" alt="logo" /></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="active nav_link" aria-current="page" href="/">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav_link" href="/all">Empleos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class=" nav_link" href="/nosotros">Nosotros</a>
+                    </li>
+                </ul>
+                <div class="ul_login">
+                    <span class="login_span">¿Sos empresa? Registrate y publica</span>
+                    <div>
+                        <a class="btn_login" href="/auth/signin">Login</a>
+                        <a class="btn_login" href="/auth/signup">Registrarse</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+<main>
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="exclamation-triangle-fill" viewBox="0 0 16 16">
+        <path
+            d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z">
+        </path>
+    </symbol>
+</svg>
+
+
+<form action="/auth/signup" method="POST">
+    <div class="signin-wrapper">
+        <!--SIGN IN--->
+        <div class="login-card-container">
+            <div class="login-card">
+                <div class="login-card-logo">
+
+                </div>
+                <div class="login-card-header">
+                    <h1>Bienvenido</h1>
+                    <div>Por favor registrate para usar la plataforma</div>
+                </div>
+                <form class="login-card-form">
+                    <div class="form-item">
+                        <span class="form-item-icon material-symbols-rounded">Person</span>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Ingrese su nombre" autofocus required>
+                    </div>
+                    <div class="form-item">
+                        <span class="form-item-icon material-symbols-rounded">Email</span>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Ingrese su correo electronico" autofocus required>
+                    </div>
+                    <div class="form-item">
+                        <span class="form-item-icon material-symbols-rounded">lock</span>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Ingresar contraseña" required>
+                    </div>
+                    <div class="form-item">
+                        <span class="form-item-icon material-symbols-rounded">lock</span>
+                        <input type="password" class="form-control" id="confirm_password" name="confirm_password" placeholder="Reingrese su contraseña" required>
+                    </div>
+                    <div class="form-item-other">
+                        <div class="checkbox">
+
+                            <label for="rememberMeCheckbox"></label>
+                        </div>
+                        <a href="#"></a>
+                    </div>
+                    <button type="submit">Registrarse</button>
+                </form>
+                <div class="login-card-footer">
+                    ¿Ya tienes una cuenta? <a href="/auth/signin">Inicia sesion</a>
+                </div>
+            </div>
+            <div class="login-card-social">
+                <div>O inicia sesion con</div>
+                <div class="login-card-social-btns">
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook"
+                            width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                            fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"></path>
+                        </svg>
+                    </a>
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-google"
+                            width="24" height="24" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor"
+                            fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M17.788 5.108a9 9 0 1 0 3.212 6.892h-8"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
