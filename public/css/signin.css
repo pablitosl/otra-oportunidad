@@ -152,16 +152,19 @@ nav::before{
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
     font-size: 1.2rem;
-    color: gray;
+    color: #222222;
     text-decoration: none;
     margin: 2px 7px;
     letter-spacing: 1px;
     transition: all .5s;
 }
-
-
-
-
+.login_registro button:hover{
+    color: #fff;
+}
+.login_registro button:focus{
+    color: #fff;
+    background-color: #18A0FB;
+}
 /* Login Card */
 .login-card {
     width: 450px;
