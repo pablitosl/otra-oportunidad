@@ -1,47 +1,61 @@
 <header>
-         <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="container-fluid">
-               <a class="navbar-brand" href="/"><img src="../../media/logo.png" alt="logo" /></a>
-               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-               </button>
-               <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                     <li class="nav-item">
-                        <a class="active nav_link" aria-current="page" href="/">Inicio</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav_link" href="/all">Empleos</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class=" nav_link" href="/nosotros">Nosotros</a>
-                     </li>
-                  </ul>
-                  <div class="ul_login">
-                     <span class="login_span">¿Sos empresa? Registrate y publica</span>
-                     <div class="pb-2">
-                        <a class="btn_login" href="/auth/signin">Login</a>
-                        <a class="btn_login" href="/auth/signup">Registrarse</a>
-                     </div>
-                     
-                  </div>
+   <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid">
+         <a class="navbar-brand" href="/"><img
+               src="../../media/logo.png"
+               alt="logo"
+            /></a>
+         <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+         >
+            <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+               <li class="nav-item">
+                  <a
+                     class="active nav_link"
+                     aria-current="page"
+                     href="/"
+                  >Inicio</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav_link" href="/all">Empleos</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav_link" href="/nosotros">Nosotros</a>
+               </li>
+            </ul>
+            <div class="ul_login">
+               <span class="login_span">¿Sos empresa? Registrate y publica</span>
+               <div class="pb-2">
+                  <a class="btn_login" href="/auth/signin">Login</a>
+                  <a class="btn_login" href="/auth/signin">Registrarse</a>
                </div>
+
             </div>
-         </nav>
+         </div>
+      </div>
+   </nav>
 </header>
 <main class="container-fluid mt-3">
-   <h1 class="text-center m-5 ">Listado de Empleos</h1>
+   <h1 class="text-center m-5">Listado de Empleos</h1>
 
-
-{{!--    <form action="/all" method="GET">
+   {{!    <form action="/all" method="GET">
     <select name="order" form="locationForm">
         <option value="CABA">CABA</option>
         <option value="Buenos Aires">Buenos Aires</option>
     </select>
     <button type="submit">filtrar</button>
-   </form> --}}
+   </form> }}
 
-{{!--     <form action="/all" method="GET" id="sort-form">
+   {{!--     <form action="/all" method="GET" id="sort-form">
      <select class="form-select text-center" name="sort" id="sort" onchange="sort-form.submit()">
        <option value="a-z"{{#if sort.a-z}}selected{{/if}}>A->Z</option>
        <option value="z-a"{{#if sort.z-a}}selected{{/if}}>Z->A</option>
@@ -51,82 +65,145 @@
    </form> --}}
    <div class="empleos">
       <section class="fw-bold sectionOne">
-            <div class="form-check mb-2">
-               <input class="form-check-input" type="checkbox" value="Front End" id="flexCheckChecked">
-               <label class="form-check-label" for="flexCheckChecked">
-                  Front End
-               </label>
-            </div>
-            <div class="form-check mb-2">
-               <input class="form-check-input" type="checkbox" value="Full Stack" id="flexCheckChecked">
-               <label class="form-check-label" for="flexCheckChecked">
-                  Full Stack
-               </label>
-            </div>
-            <div class="form-check mb-2">
-               <input class="form-check-input" type="checkbox" value="Back End" id="flexCheckChecked">
-               <label class="form-check-label" for="flexCheckChecked">
-                  Back End
-               </label>
-            </div>
-            <div class="form-check mb-2">
-               <input class="form-check-input" type="checkbox" value="Soporte Tecnico" id="flexCheckChecked">
-               <label class="form-check-label" for="flexCheckChecked">
-                  Soporte Tecnico
-               </label>
-            </div>
-            <div class="form-check mb-2">
-               <input class="form-check-input" type="checkbox" value="Help Desk" id="flexCheckChecked">
-               <label class="form-check-label" for="flexCheckChecked">
-                  Help Desk
-               </label>
-            </div>
-            <div class="form-check mb-2">
-               <input class="form-check-input" type="checkbox" value="Orientador" id="flexCheckChecked">
-               <label class="form-check-label" for="flexCheckChecked">
-                  Orientador
-               </label>
-            </div>
-            <div class="form-check mb-2">
-               <input class="form-check-input" type="checkbox" value="Bootcamp" id="flexCheckChecked">
-               <label class="form-check-label" for="flexCheckChecked">
-                  Bootcamp
-               </label>
-            </div>
-            <div class="form-check mb-2">
-               <input class="form-check-input" type="checkbox" value="Scrum Master" id="flexCheckChecked">
-               <label class="form-check-label" for="flexCheckChecked">
-                  Scrum Master
-               </label>
-            </div>
-            <div class="form-check mb-2">
-               <input class="form-check-input" type="checkbox" value="Recruiter" id="flexCheckChecked">
-               <label class="form-check-label" for="flexCheckChecked">
-                  Recruiter
-               </label>
-            </div>
-            <div class="form-check mb-2">
-               <input class="form-check-input" type="checkbox" value="Diseñador UX/UI" id="flexCheckChecked">
-               <label class="form-check-label" for="flexCheckChecked">
-                  Diseñador UX/UI
-               </label>
-            </div>
+         <div class="form-check mb-2">
+            <input
+               class="form-check-input"
+               type="checkbox"
+               value="Front End"
+               id="flexCheckChecked"
+            />
+            <label class="form-check-label" for="flexCheckChecked">
+               Front End
+            </label>
+         </div>
+         <div class="form-check mb-2">
+            <input
+               class="form-check-input"
+               type="checkbox"
+               value="Full Stack"
+               id="flexCheckChecked"
+            />
+            <label class="form-check-label" for="flexCheckChecked">
+               Full Stack
+            </label>
+         </div>
+         <div class="form-check mb-2">
+            <input
+               class="form-check-input"
+               type="checkbox"
+               value="Back End"
+               id="flexCheckChecked"
+            />
+            <label class="form-check-label" for="flexCheckChecked">
+               Back End
+            </label>
+         </div>
+         <div class="form-check mb-2">
+            <input
+               class="form-check-input"
+               type="checkbox"
+               value="Soporte Tecnico"
+               id="flexCheckChecked"
+            />
+            <label class="form-check-label" for="flexCheckChecked">
+               Soporte Tecnico
+            </label>
+         </div>
+         <div class="form-check mb-2">
+            <input
+               class="form-check-input"
+               type="checkbox"
+               value="Help Desk"
+               id="flexCheckChecked"
+            />
+            <label class="form-check-label" for="flexCheckChecked">
+               Help Desk
+            </label>
+         </div>
+         <div class="form-check mb-2">
+            <input
+               class="form-check-input"
+               type="checkbox"
+               value="Orientador"
+               id="flexCheckChecked"
+            />
+            <label class="form-check-label" for="flexCheckChecked">
+               Orientador
+            </label>
+         </div>
+         <div class="form-check mb-2">
+            <input
+               class="form-check-input"
+               type="checkbox"
+               value="Bootcamp"
+               id="flexCheckChecked"
+            />
+            <label class="form-check-label" for="flexCheckChecked">
+               Bootcamp
+            </label>
+         </div>
+         <div class="form-check mb-2">
+            <input
+               class="form-check-input"
+               type="checkbox"
+               value="Scrum Master"
+               id="flexCheckChecked"
+            />
+            <label class="form-check-label" for="flexCheckChecked">
+               Scrum Master
+            </label>
+         </div>
+         <div class="form-check mb-2">
+            <input
+               class="form-check-input"
+               type="checkbox"
+               value="Recruiter"
+               id="flexCheckChecked"
+            />
+            <label class="form-check-label" for="flexCheckChecked">
+               Recruiter
+            </label>
+         </div>
+         <div class="form-check mb-2">
+            <input
+               class="form-check-input"
+               type="checkbox"
+               value="Diseñador UX/UI"
+               id="flexCheckChecked"
+            />
+            <label class="form-check-label" for="flexCheckChecked">
+               Diseñador UX/UI
+            </label>
+         </div>
       </section>
       <section>
-      {{#each jobs}}
-         <div class="card cardEmpleo text-center m-4 ">
-            <div class="card-header border-white fs-4 fw-semibold">{{this.enterprise}}</div>
-            <div class="card-body">
-               <h5 class="card-title fs-5 fw-semibold">{{this.title}}</h5>
-               <p class="card-text"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="svg" ><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 256c-35.3 0-64-28.7-64-64s28.7-64 64-64s64 28.7 64 64s-28.7 64-64 64z"/></svg> {{this.location}}</p>
-               <p class="card-text">{{this.description}}</p>
+
+         {{#each jobs}}
+            <div class="card cardEmpleo text-center m-4">
+               <div
+                  class="card-header border-white fs-4 fw-semibold"
+               >{{this.enterprise}}</div>
+               <div class="card-body">
+                  <h5 class="card-title fs-5 fw-semibold">{{this.title}}</h5>
+                  <p class="card-text"><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 384 512"
+                        class="svg"
+                     ><path
+                           d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 256c-35.3 0-64-28.7-64-64s28.7-64 64-64s64 28.7 64 64s-28.7 64-64 64z"
+                        ></path></svg>
+                     {{this.location}}</p>
+                  <p class="card-text">{{this.description}}</p>
+               </div>
+               <a
+                  class="btn btn-success mt-4"
+                  href="/all/{{this._id}}"
+               >Detalles</a>
+               <div id="hora" class="card-footer text-muted">
+                  {{this.createdAt}}
+               </div>
             </div>
-            <a class="btn btn-success mt-4" href="/all/{{this._id}}">Detalles</a>
-            <div id="hora" class="card-footer text-muted">
-               {{this.createdAt}}
-            </div>
-         </div>
-      {{/each}}
+         {{/each}}
       </section>
    </div>
 </main>

@@ -6,6 +6,7 @@ const MongoStore = require('connect-mongo')
 const passport = require('passport')
 const methodOverride = require('method-override')
 const flash = require('connect-flash')
+const bodyParser = require('body-parser')
 
 
 const routerJobs = require('./routes/jobs.routes')
@@ -36,6 +37,8 @@ app.use(session({
 app.use(passport.initialize())
 app.use(passport.session())
 app.use(flash())
+app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser.json())
 
 app.use((req, res, next) =>{
     res.locals.todo_ok = req.flash('todo_ok')
