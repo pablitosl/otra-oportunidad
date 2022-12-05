@@ -17,8 +17,9 @@ const routerPublic = require('./routes/public.routes')
 require('dotenv').config()
 const app = express()
 
+
 //Configuracion de handlebars
-app.engine('.hbs', engine({ extname: '.hbs' }))
+app.engine('.hbs', engine({ extname: '.hbs', helpers: require('./config/handlebars-helpers') }))
 app.set('view engine', '.hbs')
 app.set('views', './views')
 require('./config/passport')
