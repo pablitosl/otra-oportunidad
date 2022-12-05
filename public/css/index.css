@@ -32,6 +32,7 @@ nav{
     color: #006494;
     text-decoration: none;
     letter-spacing: .7px;
+    text-align: center;
 }
 .nav_link:hover{
     transition: 0.3s;
@@ -723,7 +724,7 @@ footer{
         padding: 1rem;
     }
     .div_beneficios h2{
-        font-size: 3.8rem;
+        font-size: 3.7rem;
         margin-bottom: 1.5rem;
     }
     .div_beneficios p{
