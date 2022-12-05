@@ -31,14 +31,17 @@
                <li class="nav-item">
                   <a class="nav_link" href="/nosotros">Nosotros</a>
                </li>
+               <li class="nav-item">
+                  <a class="nav_link" href="/jobs">Mis Empleos</a>
+               </li>
             </ul>
             <div class="ul_login">
-               <span class="login_span">¿Sos empresa? Registrate y publica</span>
+               <span class="login_span">¿Sos empresa? Regístrate y publica</span>
                <div class="main_div">
                   <button><a
                         class="btn_login"
                         href="/auth/signin"
-                     >Login</a></button>
+                     >Inicia sesión</a></button>
                </div>
             </div>
          </div>
@@ -49,24 +52,24 @@
    <h1 class="text-center m-5 title_nosotros">Listado de Empleos</h1>
    <div class="empleos">
       <section class="sectionOne">
-            <h2 class="title_filtros">Filtros</h2>
+         <h2 class="title_filtros">Filtros</h2>
          <div class="filtros">
-            <button><a href="/all">
-            Argentina</a></button>
-            <button><a href="/all">
-            Buenos Aires</a></button>
-            <button><a href="/all">
-            Cordoba</a></button>
-            <button><a href="/all">
-            Mendoza</a></button>
-            <button><a href="/all">
-            Rosario</a></button>
-            <button><a href="/all">
-            Santa Fe</a></button>
-            <button><a href="/all">
-            Salta</a></button>
-            <button><a href="/all">
-            Tucumán</a></button>
+            <button><a href="/all/caba">
+                  CABA</a></button>
+            <button><a href="/all/arg">
+                  Argentina</a></button>
+            <button><a href="/all/bsas">
+                  Buenos Aires</a></button>
+            <button><a href="/all/cord">
+                  Córdoba</a></button>
+            <button><a href="/all/alfasc">
+                  A - Z</a></button>
+            <button><a href="/all/alfdesc">
+                  Z - A</a></button>
+            <button><a href="/all/asc">
+                  Mas Antiguos</a></button>
+            <button><a href="/all/desc">
+                  Mas Nuevos</a></button>
          </div>
       </section>
       <section>
@@ -78,18 +81,12 @@
                >{{this.enterprise}}</div>
                <div class="card-body">
                   <h5 class="card-title fs-5 fw-semibold">{{this.title}}</h5>
-                  <p class="card-text"><svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 384 512"
-                        class="svg"
-                     ><path
-                           d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 256c-35.3 0-64-28.7-64-64s28.7-64 64-64s64 28.7 64 64s-28.7 64-64 64z"
-                        ></path></svg>
+                  <p class="card-text .text-light">
                      {{this.location}}</p>
                   <p class="card-text">{{this.description}}</p>
                </div>
                <a
-                  class="btn btn-success mt-4 mx-5"
+                  class="btn btn-primary mt-4 mx-5 fw-bold"
                   href="/all/{{this._id}}"
                >Detalles</a>
                <div id="hora" class="card-footer text-muted">
@@ -101,50 +98,46 @@
    </div>
 </main>
 <footer>
-    <div class="content">
+   <div class="content">
       <div class="top">
-        <div class="logo-details">
-          <span class="logo_name">Otra Oportunidad</span>
-        </div>
-        <div class="media-icons">
-          <a href=""><i class="fab fa-facebook-f"></i></a>
-          <a href=""><i class="fab fa-twitter"></i></a>
-          <a href=""><i class="fab fa-instagram"></i></a>
-          <a href=""><i class="fab fa-linkedin-in"></i></a>
-          <a href=""><i class="fab fa-youtube"></i></a>
-        </div>
+         <div class="logo-details">
+            <span class="logo_name">Otra Oportunidad</span>
+         </div>
+         <div class="media-icons">
+            <a href=""><i class="fab fa-facebook-f"></i></a>
+            <a href=""><i class="fab fa-twitter"></i></a>
+            <a href=""><i class="fab fa-instagram"></i></a>
+            <a href=""><i class="fab fa-linkedin-in"></i></a>
+            <a href=""><i class="fab fa-youtube"></i></a>
+         </div>
       </div>
-      <hr class="hr">
+      <hr class="hr" />
       <div class="link-boxes">
-        <ul class="box">
-          <li class="link_name">Inicio</li>
-          <li><a href="/">Home</a></li>
-          <li><a href="/nosotros">Nosotros</a></li>
-        </ul>
-        <ul class="box">
-          <li class="link_name">Empleos</li>
-          <li><a href="/all">Orientador</a></li>
-          <li><a href="/all">Desarrollador web</a></li>
-        </ul>
-        <ul class="box">
-          <li class="link_name">Cuenta</li>
-          <li><a href="auth/signup">Registro</a></li>
-          <li><a href="auth/signin">Mi cuenta</a></li>
-        </ul>
-        <ul class="box input-box">
-          <li class="link_name">Suscripción</li>
-          <li><input type="text" placeholder="Email"></li>
-          <li><input type="button" value="Suscríbete"></li>
-        </ul>
+         <ul class="box">
+            <li class="link_name">Inicio</li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/nosotros">Nosotros</a></li>
+         </ul>
+         <ul class="box">
+            <li class="link_name">Cuenta</li>
+            <li><a href="auth/signin">Registro</a></li>
+            <li><a href="auth/signin">Mi cuenta</a></li>
+         </ul>
+         <ul class="box input-box">
+            <li class="link_name">Suscripción</li>
+            <li><input type="text" placeholder="Email" /></li>
+            <li><input type="button" value="Suscríbete" /></li>
+         </ul>
       </div>
-    </div>
-    <div class="bottom-details">
+   </div>
+   <div class="bottom-details">
       <div class="bottom_text">
-        <span class="copyright_text">Copyright © 2022 <a href="/">Otra Oportunidad.</a>Todos los derechos reservados</span>
-        <span class="policy_terms">
-          <a href="">Politicas de privacidad</a>
-          <a href="">Terminos y condiciones</a>
-        </span>
+         <span class="copyright_text">Copyright © 2022
+            <a href="/">Otra Oportunidad.</a>Todos los derechos reservados</span>
+         <span class="policy_terms">
+            <a href="">Políticas de privacidad</a>
+            <a href="">Términos y condiciones</a>
+         </span>
       </div>
-    </div>
-  </footer>
+   </div>
+</footer>

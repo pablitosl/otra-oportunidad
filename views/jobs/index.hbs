@@ -1,7 +1,7 @@
 <header>
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
-            <a class="navbar-brand"  href="/"><img src="../../media/logo.png" alt="logo" /></a>
+            <a class="navbar-brand" href="/"><img src="../../media/logo.png" alt="logo" /></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -13,17 +13,16 @@
                         <a class="active nav_link" aria-current="page" href="/">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav_link" href="/all">Mis empleos</a>
+                        <a class="nav_link" href="/all">Empleos</a>
                     </li>
                     <li class="nav-item">
                         <a class=" nav_link" href="/nosotros">Nosotros</a>
                     </li>
                 </ul>
                 <form class="d-flex justify-content-center mb-3" role="search">
-                    {{!-- <a id="toast" class="btn btn-outline-danger">Cerrar Sesion</a> --}}
                     <button class="btn btn-primary mx-3 fw-bold fs-5" type="button">{{name}}</button>
                     <button onclick="showAlert()" class="btn btn-outline-danger btnCerrar px-5" type="button">Cerrar
-                        Sesion</button>
+                        Sesión</button>
                 </form>
             </div>
         </div>
@@ -31,8 +30,13 @@
     </nav>
 </header>
 <main class="container mt-3">
-    <h1 class="text-center m-4">Listado de Empleos (Privado Empresa)</h1>
-    <a class="btn btn-success  m-3 px-4 py-2 fs-5 text-center" href="/jobs/create">CREAR EMPLEO NUEVO <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="35"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM232 344V280H168c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V168c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H280v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg></a>
+    <h1 class="text-center m-4">Mis Publicaciones</h1>
+    <a class="btn btn-success  m-3 px-4 py-2 fs-5 text-center" href="/jobs/create">CREAR EMPLEO NUEVO <svg
+            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="35">
+            <!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+            <path
+                d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM232 344V280H168c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V168c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H280v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z" />
+        </svg></a>
 
 
 
@@ -41,7 +45,10 @@
         <div class="card-header border-white">{{this.enterprise}}</div>
         <div class="card-body">
             <h5 class="card-title">{{this.title}}</h5>
+            <p class="card-text .text-light">
+                {{this.location}}</p>
             <p class="card-text">{{this.description}}</p>
+
             <a href="/jobs/{{this._id}}" class="btn btn-primary">Detalles</a>
             <a href="/jobs/edit/{{this._id}}" class="btn btn-warning">Editar</a>
             <form class="d-inline" action="/jobs/{{this._id}}?_method=DELETE" method="post">

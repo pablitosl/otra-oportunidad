@@ -1,4 +1,6 @@
 const mongoose = require('mongoose')
+const Schema = mongoose.Schema
+const AuthSchema = require('./auth.model')
 
 //Creo el SCHEMA
 
@@ -27,9 +29,7 @@ const jobSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    user: {
-        type: String
-    }
+    user: {type: mongoose.Schema.Types.ObjectId, ref: 'Auth' }
 },
 {
     versionKey: false,

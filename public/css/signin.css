@@ -59,7 +59,7 @@ nav::before{
 }
 .login_span{
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 700;
 }
 .btn_login{
     padding: 0.5rem 1.5rem;
@@ -132,7 +132,6 @@ nav::before{
     text-align: center;
     padding: 1rem;
     width: fit-content;
-    border-radius: 10px;
     border: 1px solid #0dcaf0;
     display: flex;
     justify-content: space-between;
@@ -281,7 +280,7 @@ nav::before{
     background: rgba(255, 255, 255, .3);
     padding: 1rem 1.5rem;
     padding-left: calc(1rem * 3.5);
-    border-radius: 100px;
+    
     width: 100%;
     transition: background .5s;
 }
@@ -300,7 +299,7 @@ nav::before{
     background: black;
     color: white;
     padding: 1rem;
-    border-radius: 100px;
+    
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -344,7 +343,7 @@ nav::before{
     width: 50px;
     height: 50px;
     background-color: rgba(255, 255, 255, .6);
-    border-radius: 100px;
+    
     transition: all .5s;
     box-shadow: 0 0 15px 3px rgba(0, 0, 0, .3);
 }

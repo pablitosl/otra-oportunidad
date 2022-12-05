@@ -4,9 +4,7 @@ const jobModel = require("../models/job.model")
 const getAll = async (req, res) => {
 
     try {
-
-        const jobs = await jobModel.find({}).lean() // .lean() => Dejarme lo que devuelve como un objeto vanilla javascript
-
+        const jobs = await jobModel.find({ }).lean() // .lean() => Dejarme lo que devuelve como un objeto vanilla javascript
         //Verifico que existan
         jobs.user = req.user.name
         res.status(200).render('jobs/index', { jobs, title: 'Tus empleos - Otra Oportunidad', name: `${jobs.user}` })
@@ -58,7 +56,7 @@ const createJob = async (req, res) => {
     try {
         console.log(req.body)
         const job = new jobModel(req.body)
-        job.user = req.user.id
+        job.user = req.user._id
         await job.save()
         res.status(201).redirect('/jobs')
     } catch (error) {

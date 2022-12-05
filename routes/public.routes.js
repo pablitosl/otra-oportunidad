@@ -69,7 +69,7 @@ routerPublic.get('/all/alfasc', async (req, res) => {
 })
 
 //Alfabetico desc
-routerPublic.get('/all/alfasc', async (req, res) => {
+routerPublic.get('/all/alfdesc', async (req, res) => {
     try {
 
         let sort = { title: -1}

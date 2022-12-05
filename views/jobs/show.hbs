@@ -1,12 +1,17 @@
-<div>
-    <button id="btnAtras"><a href="/jobs" class="nav-link">Volver Atras</a></button>
-</div>
-<div id="div" class="cardEmpleo">
-    <h1>{{job.title}}</h1>
+<div class="card cardEmpleo text-center m-4">
+   <div
+      class="card-header border-white fs-4 fw-semibold"
+   >{{job.enterprise}}</div>
+   <div class="card-body">
+      <h5 class="card-title fs-5 fw-semibold">{{job.title}}</h5>
+      <p class="card-text">
+         {{job.location}}</p>
+      <p class="card-text">{{job.description}}</p>
+      <p>Teléfono de Contacto: {{job.phone}}</p>
+      <p>Enviar CV a: {{job.email}}</p>
+   </div>
 
-    <h2>{{job.enterprise}}</h2>
-    <hr class="hr">
-    <p>{{job.description}}</p>
-    <p>Telefono de Contacto: {{job.phone}}</p>
-    <p>Enviar CV a:  {{job.email}}</p>
+</div>
+<div class="atrasWrapper">
+   <button id="btnAtras"><a href="/all" class="nav-link">Volver Atrás</a></button>
 </div>

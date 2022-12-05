@@ -158,8 +158,7 @@ nav{
 }
 .div_presentacion a{
     border: 1px solid hsl(0, 0%, 50%);
-    background: #18A0FB;
-    border-radius: 5px;
+    background: #222222;
     padding: 1rem 6rem;
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
@@ -545,7 +544,7 @@ footer{
     text-align: center;
 }
 .btnRedes{
-    background-color: peachpuff;
+    background-color: #1DA1F2;
     width: 35px;
     font-size: 1.3rem;
     height: 35px;
@@ -556,6 +555,7 @@ footer{
     cursor: pointer;
     box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.75);
     text-align: center;
+    color: #F5F5F5;
 }
 
 /*SECCION EMPLEOS*/
@@ -604,17 +604,11 @@ footer{
   color:#F5F5F5;
   padding-bottom: 0;
 }
-.svg{
-  width: 18px;
-  height: 18px;
-  color: #F5F5F5;
-  text-shadow: 0 0 1px #F5F5F5;
-}
 .btnCerrar{
     font-weight: 600;
     font-size: 1.2rem;
     background-color: rgba(255, 0, 0, 0.259);
-    color: red;
+    color: crimson;
 }
 
 /*Seccion RESPONSIVE*/

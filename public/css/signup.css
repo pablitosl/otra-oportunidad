@@ -192,7 +192,6 @@ nav::before{
     background: rgba(255, 255, 255, .3);
     padding: 1rem 1.5rem;
     padding-left: calc(1rem * 3.5);
-    border-radius: 100px;
     width: 100%;
     transition: background .5s;
 }
@@ -211,7 +210,6 @@ nav::before{
     background: black;
     color: white;
     padding: 1rem;
-    border-radius: 100px;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 2px;

@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
 const bcrypt = require('bcrypt')
+const jobs = require('./job.model')
 
 const AuthSchema = new mongoose.Schema(
     {
@@ -22,14 +23,13 @@ const AuthSchema = new mongoose.Schema(
         password: {
             type: String,
             require: true
-        }
+        },
     },
     {
         versionKey: false,
         timestamps: true
     }
 )
-
 //Methods
 //Es encriptando la contraseña para guardarla asi en la DB
 //Encriptar algo en una sola via
