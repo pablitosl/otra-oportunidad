@@ -8,7 +8,7 @@ routerPublic.get('/', (req, res) => {
 })
 
 //Filtro Argentina
-routerPublic.get('/all/bsas', async (req, res) => {
+routerPublic.get('/all/arg', async (req, res) => {
     try {
 
         const jobs = await jobModel.find({ location:{$in:[ 'Argentina', 'argentina', 'ARGENTINA', ]}}).lean() // .lean() => Dejarme lo que devuelve como un objeto vanilla javascript
@@ -19,8 +19,8 @@ routerPublic.get('/all/bsas', async (req, res) => {
     }
 })
 
-//Filtro Argentina
-routerPublic.get('/all/bsas', async (req, res) => {
+//Filtro Cordoba
+routerPublic.get('/all/cord', async (req, res) => {
     try {
 
         const jobs = await jobModel.find({ location:{$in:[ 'CORDOBA', 'cordoba', 'Cordoba', 'Córdoba', 'córdoba', 'CÓRDOBA' ]}}).lean() // .lean() => Dejarme lo que devuelve como un objeto vanilla javascript
@@ -109,15 +109,9 @@ routerPublic.get('/all/desc', async (req, res) => {
 
 routerPublic.get('/all', async (req, res) => {
 
-    /* .sort(sort) */
-
-    /* let sort = { title: 1} */
     try {
         const jobs = await jobModel.find({}).lean() // .lean() => Dejarme lo que devuelve como un objeto vanilla javascript
         //Verifico que existan
-
-/*         let date = await jobModel.find({timestamp: createdAt}).lean()
-        console.log(date) */
 
         res.status(200).render( 'index', { layout: 'main', jobs })
 
@@ -130,10 +124,8 @@ routerPublic.get('/all', async (req, res) => {
 routerPublic.get('/all/:id', async (req, res) => {
     try {
         const { id } = req.params
-        //console.log(id)
 
         const job = await jobModel.findById(id).lean() // .lean() => Dejarme lo que devuelve como un objeto vanilla javascript
-        // console.log(pelicula)
 
         res.render('all/showPublic', { job, title: `${job.title}`})
     } catch (error) {
