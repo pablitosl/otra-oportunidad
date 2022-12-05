@@ -46,118 +46,27 @@
    </nav>
 </header>
 <main class="container-fluid mt-3">
-   <h1 class="text-center m-5">Listado de Empleos</h1>
+   <h1 class="text-center m-5 title_nosotros">Listado de Empleos</h1>
    <div class="empleos">
-      <section class="fw-bold sectionOne">
-         <div class="form-check mb-2">
-            <input
-               class="form-check-input"
-               type="checkbox"
-               value="Front End"
-               id="flexCheckChecked"
-            />
-            <label class="form-check-label" for="flexCheckChecked">
-               Front End
-            </label>
-         </div>
-         <div class="form-check mb-2">
-            <input
-               class="form-check-input"
-               type="checkbox"
-               value="Full Stack"
-               id="flexCheckChecked"
-            />
-            <label class="form-check-label" for="flexCheckChecked">
-               Full Stack
-            </label>
-         </div>
-         <div class="form-check mb-2">
-            <input
-               class="form-check-input"
-               type="checkbox"
-               value="Back End"
-               id="flexCheckChecked"
-            />
-            <label class="form-check-label" for="flexCheckChecked">
-               Back End
-            </label>
-         </div>
-         <div class="form-check mb-2">
-            <input
-               class="form-check-input"
-               type="checkbox"
-               value="Soporte Tecnico"
-               id="flexCheckChecked"
-            />
-            <label class="form-check-label" for="flexCheckChecked">
-               Soporte Tecnico
-            </label>
-         </div>
-         <div class="form-check mb-2">
-            <input
-               class="form-check-input"
-               type="checkbox"
-               value="Help Desk"
-               id="flexCheckChecked"
-            />
-            <label class="form-check-label" for="flexCheckChecked">
-               Help Desk
-            </label>
-         </div>
-         <div class="form-check mb-2">
-            <input
-               class="form-check-input"
-               type="checkbox"
-               value="Orientador"
-               id="flexCheckChecked"
-            />
-            <label class="form-check-label" for="flexCheckChecked">
-               Orientador
-            </label>
-         </div>
-         <div class="form-check mb-2">
-            <input
-               class="form-check-input"
-               type="checkbox"
-               value="Bootcamp"
-               id="flexCheckChecked"
-            />
-            <label class="form-check-label" for="flexCheckChecked">
-               Bootcamp
-            </label>
-         </div>
-         <div class="form-check mb-2">
-            <input
-               class="form-check-input"
-               type="checkbox"
-               value="Scrum Master"
-               id="flexCheckChecked"
-            />
-            <label class="form-check-label" for="flexCheckChecked">
-               Scrum Master
-            </label>
-         </div>
-         <div class="form-check mb-2">
-            <input
-               class="form-check-input"
-               type="checkbox"
-               value="Recruiter"
-               id="flexCheckChecked"
-            />
-            <label class="form-check-label" for="flexCheckChecked">
-               Recruiter
-            </label>
-         </div>
-         <div class="form-check mb-2">
-            <input
-               class="form-check-input"
-               type="checkbox"
-               value="Diseñador UX/UI"
-               id="flexCheckChecked"
-            />
-            <label class="form-check-label" for="flexCheckChecked">
-               Diseñador UX/UI
-            </label>
+      <section class="sectionOne">
+            <h2 class="title_filtros">Filtros</h2>
+         <div class="filtros">
+            <button><a href="/all">
+            Argentina</a></button>
+            <button><a href="/all">
+            Buenos Aires</a></button>
+            <button><a href="/all">
+            Cordoba</a></button>
+            <button><a href="/all">
+            Mendoza</a></button>
+            <button><a href="/all">
+            Rosario</a></button>
+            <button><a href="/all">
+            Santa Fe</a></button>
+            <button><a href="/all">
+            Salta</a></button>
+            <button><a href="/all">
+            Tucumán</a></button>
          </div>
       </section>
       <section>
@@ -180,7 +89,7 @@
                   <p class="card-text">{{this.description}}</p>
                </div>
                <a
-                  class="btn btn-success mt-4"
+                  class="btn btn-success mt-4 mx-5"
                   href="/all/{{this._id}}"
                >Detalles</a>
                <div id="hora" class="card-footer text-muted">
@@ -191,3 +100,51 @@
       </section>
    </div>
 </main>
+<footer>
+    <div class="content">
+      <div class="top">
+        <div class="logo-details">
+          <span class="logo_name">Otra Oportunidad</span>
+        </div>
+        <div class="media-icons">
+          <a href=""><i class="fab fa-facebook-f"></i></a>
+          <a href=""><i class="fab fa-twitter"></i></a>
+          <a href=""><i class="fab fa-instagram"></i></a>
+          <a href=""><i class="fab fa-linkedin-in"></i></a>
+          <a href=""><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <hr class="hr">
+      <div class="link-boxes">
+        <ul class="box">
+          <li class="link_name">Inicio</li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/nosotros">Nosotros</a></li>
+        </ul>
+        <ul class="box">
+          <li class="link_name">Empleos</li>
+          <li><a href="/all">Orientador</a></li>
+          <li><a href="/all">Desarrollador web</a></li>
+        </ul>
+        <ul class="box">
+          <li class="link_name">Cuenta</li>
+          <li><a href="auth/signup">Registro</a></li>
+          <li><a href="auth/signin">Mi cuenta</a></li>
+        </ul>
+        <ul class="box input-box">
+          <li class="link_name">Suscripción</li>
+          <li><input type="text" placeholder="Email"></li>
+          <li><input type="button" value="Suscríbete"></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom-details">
+      <div class="bottom_text">
+        <span class="copyright_text">Copyright © 2022 <a href="/">Otra Oportunidad.</a>Todos los derechos reservados</span>
+        <span class="policy_terms">
+          <a href="">Politicas de privacidad</a>
+          <a href="">Terminos y condiciones</a>
+        </span>
+      </div>
+    </div>
+  </footer>

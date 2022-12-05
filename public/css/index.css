@@ -187,10 +187,12 @@ nav{
     display: flex;
     justify-content: space-between;
     background: rgb(215,255,243);
-    background: linear-gradient(90deg, rgba(215,255,243,1) 0%, rgba(148,187,233,1) 100%);
+    background: linear-gradient(90deg, rgba(240,240,240,1) 0%, rgb(110, 160, 202) 100%);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center; 
+    border-top: 1px solid #006494;
+    border-bottom: 1px solid #006494;
 }
 .div_beneficios{
     width: 60%;
@@ -260,6 +262,7 @@ nav{
     color: hsl(0, 0%, 30%);
     letter-spacing: 1px;
     margin-bottom: 2rem;
+    text-align: center;
 }
 .div_empresas{
     display: flex;
@@ -562,14 +565,39 @@ footer{
     padding-bottom: 2rem;
 }
 .sectionOne{
-    background-color: rgba(var(--bs-dark-rgb));
-    opacity: 0.7;
+    background-color: rgba(0,0,0,0.65);
     margin: 1.5rem;
     font-size: 1.25rem;
     padding: 3rem;
     color: #F5F5F5;
     border-radius: 0.375rem;
     height: fit-content;
+}
+.title_filtros{
+  text-align: center;
+  width: 100%;
+  margin: auto;
+  font-size: 2.5rem;
+}
+.filtros{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.filtros button{
+    background: #222222;
+    color: #fff;
+    font-size: 1.25rem;
+    padding: 1rem 2rem;
+    margin: .5rem;
+    border-radius: 0.375rem;
+    border: none;
+    cursor: pointer;
+}
+.filtros button a{
+  text-decoration: none;
+  color: #F5F5F5;
 }
 .cardEmpleo{
   background-color: hsla(206, 100%, 6%, 0.97);
@@ -666,6 +694,13 @@ footer{
     .sectionOne div{
         margin-right: 10px;
     }
+    .filtros{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+  }
 }
 /*Celular*/
 @media screen and (max-width:570px) {
