@@ -7,15 +7,15 @@ LINK: https://otra-oportunidad-production.up.railway.app/
 
 TECNOLOGIAS UTILIZADAS:
 
-Front End
+# Front End: 
 ° HTML
 ° CSS
 ° Bootstrap
 ° JavaScript
 
-Back End
+# Back End: 
 ° NodeJS
 ° Express-handlebars
 
-Base de Datos
+# Base de Datos: 
 ° MongoDB
